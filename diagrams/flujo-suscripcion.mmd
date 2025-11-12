@@ -1,0 +1,16 @@
+%% Flujo — Suscripción de oferta de datos
+flowchart TD
+  IN["Inicio: usuario en WebPortal/ODP"] --> SEG["Detectar segmento (prepago/pospago/híbrido)"]
+  SEG --> OFF["Catálogo: listar ofertas elegibles"]
+  OFF --> PAY["Canal de pago según segmento"]
+  PAY -->|Prepago| BAL["Pago con saldo"]
+  PAY -->|Pospago| BILL["Cargo a ciclo (bill cycle)"]
+  PAY -->|Cualquiera| CC["Tarjeta de crédito (redir/embebido)"]
+  BAL --> CONF["Confirmación de suscripción"]
+  BILL --> CONF
+  CC --> CONF
+  CONF --> OSB["Orquestación (OSB)"]
+  OSB --> PCRF["Aplicar políticas"]
+  OSB --> BILL2["BSCS/ALU: provisioning/billing"]
+  PCRF --> OUT["Oferta activa"]
+  BILL2 --> OUT

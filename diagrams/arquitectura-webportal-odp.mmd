@@ -1,0 +1,37 @@
+%% Arquitectura — WebPortal/ODP (TELCO)
+graph TD
+
+  subgraph "Clientes"
+    WEB["WebPortal (web/wap)"]
+    ODP["ODP (app móvil)"]
+  end
+
+  subgraph "Canal Autoservicio"
+    UCM["UCM (CIM/USM)"]
+    UOM["UOM (ofertas/servicios)"]
+  end
+
+  subgraph "Integración"
+    OSB["Bus / Middleware (WS)"]
+  end
+
+  subgraph "Core TELCO"
+    BSCS["BSCS (pospago)"]
+    ALU["ALU/ICC (prepago)"]
+    PCRF["PCRF (políticas)"]
+  end
+
+  WEB --> UCM
+  ODP --> UCM
+  UCM --> UOM
+  UOM --> OSB
+  OSB --> BSCS
+  OSB --> ALU
+  OSB --> PCRF
+
+  style OSB fill:#ffd,stroke:#333
+  style UCM fill:#bbf,stroke:#333
+  style UOM fill:#bbf,stroke:#333
+  style BSCS fill:#cfc,stroke:#333
+  style ALU fill:#cfc,stroke:#333
+  style PCRF fill:#cfc,stroke:#333
