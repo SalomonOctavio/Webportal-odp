@@ -11,18 +11,20 @@ Disponibilizar en línea las ofertas comerciales y asegurar la correcta activaci
 - Integraciones: **UCM/UOM** ↔ **OSB/Middleware** ↔ **BSCS/ALU/PCRF**.
 
 ## Artefactos
+
 📁 `/diagrams`  
-- `arquitectura-webportal-odp.mmd` — contexto e integraciones.  
-- `flujo-suscripcion.mmd` — suscripción por segmento/pago.
+- [`arquitectura-webportal-odp.mmd`](./diagrams/arquitectura-webportal-odp.mmd): contexto e integraciones.  
+- [`flujo-suscripcion.mmd`](./diagrams/flujo-suscripcion.mmd): suscripción por segmento/método de pago.
 
 📁 `/docs`  
-- `kpis.md` — TTGL/TTV y métricas de adopción (placeholders).  
-- `catalogo-ofertas.md` — estructura y parámetros de oferta (máscara).  
-- `uat-casos.md` — matriz de pruebas por categoría (login, saldo, suscripción, notificaciones).
+- [`kpis.md`](./docs/kpis.md): TTGL/TTV y métricas de adopción (placeholders).  
+- [`catalogo-ofertas.md`](./docs/catalogo-ofertas.md): estructura y parámetros de oferta (máscara).  
+- [`uat-casos.md`](./docs/uat-casos.md): matriz de pruebas por categoría (login, saldo, suscripción, notificaciones).
 
 📁 `/uat`  
-- `plan-uat.md` — alcance, precondiciones y participantes.  
-- `checklist-go-no-go.md` — criterios mínimos de liberación.
+- [`plan-uat.md`](./uat/plan-uat.md): alcance, precondiciones y participantes.  
+- [`checklist-go-no-go.md`](./uat/checklist-go-no-go.md): criterios mínimos de liberación.
+
 
 ## Nota
 Repo **anonimizado**: sin adjuntar documentos de proveedor ni credenciales. Se preserva el enfoque funcional.
